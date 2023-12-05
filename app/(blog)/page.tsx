@@ -1,9 +1,10 @@
 import { getLatestPost } from "@/lib/api";
+import { PostType } from "@/lib/types";
 import { DateTime } from "luxon";
 import Link from "next/link";
 
 export default async function Home() {
-  const post = await getLatestPost();
+  const post: PostType = await getLatestPost();
   return (
     <div>
       <h2>
