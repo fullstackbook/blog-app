@@ -12,6 +12,11 @@ function getPostFilenames() {
   return fs.readdirSync(postsDirectory);
 }
 
+export function getPostSlugs() {
+  const filenames = getPostFilenames();
+  return filenames.map((filename) => filename.replace(/\.md$/, ""));
+}
+
 async function getAllPosts(): Promise<PostType[]> {
   const filenames = getPostFilenames();
   const posts = [];

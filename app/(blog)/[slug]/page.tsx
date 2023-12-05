@@ -1,4 +1,4 @@
-import { getPostBySlug } from "@/lib/api";
+import { getPostBySlug, getPostSlugs } from "@/lib/api";
 import { DateTime } from "luxon";
 import markdownStyles from "../markdown-styles.module.css";
 import Link from "next/link";
@@ -35,4 +35,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
       </div>
     </div>
   );
+}
+
+export async function generateStaticParams() {
+  const slugs = getPostSlugs();
+  return slugs.map((slug) => ({ slug: slug }));
 }
