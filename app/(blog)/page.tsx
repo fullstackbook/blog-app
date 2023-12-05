@@ -8,10 +8,10 @@ export default async function Home() {
   const post: PostType = await getLatestPost();
   return (
     <div>
-      <h2>
+      <h2 className="text-6xl text-green-400">
         <Link href={`/${post.slug}`}>{post.title}</Link>
       </h2>
-      <div>{post.date.toLocaleString(DateTime.DATETIME_FULL)}</div>
+      <div className="my-5">{post.date.toLocaleString(DateTime.DATE_FULL)}</div>
       <div
         className={markdownStyles["markdown"]}
         dangerouslySetInnerHTML={{ __html: post.content }}

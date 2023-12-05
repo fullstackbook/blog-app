@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-      <h1>
+    <div className="m-5">
+      <h1 className="my-5 font-mono font-bold text-5xl text-blue-400">
         <Link href="/">Blog App</Link>
       </h1>
       <div>{children}</div>
