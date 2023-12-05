@@ -19,6 +19,7 @@ async function getAllPosts(): Promise<PostType[]> {
     const post = await getPostByFilename(filename);
     posts.push(post);
   }
+  generateNextAndPrevSlugs(posts);
   return posts;
 }
 
@@ -51,6 +52,23 @@ export async function getPostBySlug(slug: string) {
   }
   post.content = await markdownToHtml(post.content);
   return post;
+}
+
+function generateNextAndPrevSlugs(posts: PostType[]) {
+  for (let i = 0; i < posts.length; i++) {
+    if (i < posts.length - 1) {
+      posts[i].nextPost = {
+        title: posts[i + 1].title,
+        slug: posts[i + 1].slug,
+      };
+    }
+    if (i > 0) {
+      posts[i].prevPost = {
+        title: posts[i - 1].title,
+        slug: posts[i - 1].slug,
+      };
+    }
+  }
 }
 
 async function markdownToHtml(markdown: string) {
