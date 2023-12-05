@@ -24,6 +24,7 @@ export async function getAllPosts(): Promise<PostType[]> {
     const post = await getPostByFilename(filename);
     posts.push(post);
   }
+  posts.sort((a, b) => (a.date < b.date ? -1 : 1));
   generateNextAndPrevSlugs(posts);
   return posts;
 }
@@ -43,8 +44,7 @@ async function getPostByFilename(filename: string): Promise<PostType> {
 
 export async function getLatestPost(): Promise<PostType> {
   const posts = await getAllPosts();
-  posts.sort((a, b) => (a.date > b.date ? -1 : 1));
-  const firstPost = posts[0];
+  const firstPost = posts[posts.length - 1];
   firstPost.content = await markdownToHtml(firstPost.content);
   return firstPost;
 }
