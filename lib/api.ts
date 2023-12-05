@@ -43,6 +43,16 @@ export async function getLatestPost(): Promise<PostType> {
   return firstPost;
 }
 
+export async function getPostBySlug(slug: string) {
+  const posts = await getAllPosts();
+  const post = posts.find((post) => post.slug === slug);
+  if (!post) {
+    throw Error("post not found");
+  }
+  post.content = await markdownToHtml(post.content);
+  return post;
+}
+
 async function markdownToHtml(markdown: string) {
   const result = await remark().use(html).process(markdown);
   return result.toString();
