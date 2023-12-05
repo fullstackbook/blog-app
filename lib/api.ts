@@ -17,7 +17,7 @@ export function getPostSlugs() {
   return filenames.map((filename) => filename.replace(/\.md$/, ""));
 }
 
-async function getAllPosts(): Promise<PostType[]> {
+export async function getAllPosts(): Promise<PostType[]> {
   const filenames = getPostFilenames();
   const posts = [];
   for (const filename of filenames) {
