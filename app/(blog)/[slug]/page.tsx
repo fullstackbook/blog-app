@@ -9,7 +9,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const post = await getPostBySlug(slug);
 
   return (
-    <div className="my-5">
+    <div className="my-5 prose dark:prose-invert">
       <h1 className="text-6xl text-yellow-400">{post.title}</h1>
       <div className="my-5">{post.date.toLocaleString(DateTime.DATE_FULL)}</div>
       <div
