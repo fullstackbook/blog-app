@@ -2,9 +2,8 @@ import fs from "fs";
 import matter from "gray-matter";
 import { DateTime } from "luxon";
 import { join } from "path";
-import { remark } from "remark";
-import html from "remark-html";
 import { PostType } from "./types";
+import { parseMarkdown } from "./markdown";
 
 const postsDirectory = join(process.cwd(), "_posts");
 
@@ -45,7 +44,7 @@ async function getPostByFilename(filename: string): Promise<PostType> {
 export async function getLatestPost(): Promise<PostType> {
   const posts = await getAllPosts();
   const firstPost = posts[posts.length - 1];
-  firstPost.content = await markdownToHtml(firstPost.content);
+  firstPost.content = await parseMarkdown(firstPost.content);
   return firstPost;
 }
 
@@ -55,7 +54,8 @@ export async function getPostBySlug(slug: string) {
   if (!post) {
     throw Error("post not found");
   }
-  post.content = await markdownToHtml(post.content);
+  post.content = await parseMarkdown(post.content);
+
   return post;
 }
 
@@ -74,9 +74,4 @@ function generateNextAndPrevSlugs(posts: PostType[]) {
       };
     }
   }
-}
-
-async function markdownToHtml(markdown: string) {
-  const result = await remark().use(html).process(markdown);
-  return result.toString();
 }

@@ -7,7 +7,7 @@ import "prismjs/components/prism-python";
 
 export default function PrismLoader() {
   useEffect(() => {
-    Prism.highlightAll();
+    // Prism.highlightAll();
   }, []);
 
   return <div className="hidden"></div>;

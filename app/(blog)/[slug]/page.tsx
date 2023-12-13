@@ -34,7 +34,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           </Link>
         )}
       </div>
-      <PrismLoader />
+      {/* <PrismLoader /> */}
     </div>
   );
 }

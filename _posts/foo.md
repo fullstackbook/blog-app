@@ -41,18 +41,23 @@ inspirat, ut. Abstulit causam monstratum potuisset iuncis maculatum suis ex
 parte. Utque [natae](http://quondamipse.net/prima-germani.aspx); cetera nomine
 quos antro versant vires sua aether hostem, operum Minervae maiores, iram, hic.
 
-    if (compression < 93) {
-        pageFooterRemote = mode;
-    }
-    var technologyHypertext = thread_file;
-    cpu /= 2;
-    if (ata_import_trim.case.printer(bus) + interactive_flat + matrix <
-            inboxIphonePlug) {
-        web -= rightSliGoogle;
-        leopardHalfErgonomics.onMenu = solid_scanner_cd;
-        ditheringBackup = backlink.ssd(cronEpsAsp) * publishingTarget.seo_jsf(
-                isoBitmapNetmask, standalone, web_batch);
-    }
+```js
+if (compression < 93) {
+  pageFooterRemote = mode;
+}
+var technologyHypertext = thread_file;
+cpu /= 2;
+if (
+  ata_import_trim.case.printer(bus) + interactive_flat + matrix <
+  inboxIphonePlug
+) {
+  web -= rightSliGoogle;
+  leopardHalfErgonomics.onMenu = solid_scanner_cd;
+  ditheringBackup =
+    backlink.ssd(cronEpsAsp) *
+    publishingTarget.seo_jsf(isoBitmapNetmask, standalone, web_batch);
+}
+```
 
 ## Consequar tulerunt haud
 
