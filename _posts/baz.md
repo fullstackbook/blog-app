@@ -24,17 +24,24 @@ Gemma modum gerit ursaque, iussit Sidonide quaeras pulsavit **ad tumidi**
 spatium hoc iaces terras chaos hic _dente_ metior aquas. Ramis quam agros, alis
 officio.
 
-    docking.white = 5 - noc_pop_bios;
-    oem_qwerty = activex_browser;
-    restore_reciprocal = ascii;
-    social_passive_memory(dnsPointLatency);
-    if (drm(remoteSystem, pretest) + 91 - file) {
-        reader(flash_state_rgb.so(pci_search_app, 32), baud_daw(runtimePci,
-                volumeBusLink, stick_media_trash));
-        myspace_basic(infringement, terahertz.scrolling.protector_url(
-                pram_dithering_web), requirements);
-        lionSpeedCard *= 24 + application.bezel_smtp(4, caps);
-    }
+```js
+docking.white = 5 - noc_pop_bios;
+oem_qwerty = activex_browser;
+restore_reciprocal = ascii;
+social_passive_memory(dnsPointLatency);
+if (drm(remoteSystem, pretest) + 91 - file) {
+  reader(
+    flash_state_rgb.so(pci_search_app, 32),
+    baud_daw(runtimePci, volumeBusLink, stick_media_trash)
+  );
+  myspace_basic(
+    infringement,
+    terahertz.scrolling.protector_url(pram_dithering_web),
+    requirements
+  );
+  lionSpeedCard *= 24 + application.bezel_smtp(4, caps);
+}
+```
 
 ## Constitit a potentia posses
 

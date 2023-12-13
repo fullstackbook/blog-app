@@ -2,6 +2,7 @@ import { getPostBySlug, getPostSlugs } from "@/lib/api";
 import { DateTime } from "luxon";
 import markdownStyles from "../markdown-styles.module.css";
 import Link from "next/link";
+import PrismLoader from "@/ui/prism-loader";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;
@@ -33,6 +34,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           </Link>
         )}
       </div>
+      <PrismLoader />
     </div>
   );
 }
